@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little Bit of Heaven</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables for easy color changes */
+        :root {
+            --primary-bg: #fce4ec;
+            --primary-text: #333;
+            --heaven-color: #ff69b4; /* Pink */
+            --yes-btn-bg: #4CAF50;
+            --yes-btn-hover: #45a049;
+            --no-btn-bg: #f44336;
+            --no-btn-hover: #e53935;
+        }
+
+        body {
+            /* APPLY THE CARTOONY FONT */
+            font-family: 'Kalam', cursive;
+            text-align: center;
+            padding-top: 50px;
+            background-color: var(--primary-bg);
+            color: var(--primary-text);
+        }
+        
+        #message {
+            font-size: 2.5em; /* Bigger text */
+            margin-bottom: 20px;
+            font-weight: 700; /* Bold */
+            /* Text Shadow for a cute, raised effect */
+            text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5); 
+        }
+        
+        .buttons button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            margin: 0 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        #yesBtn { background-color: var(--yes-btn-bg); color: white; }
+        #yesBtn:hover { background-color: var(--yes-btn-hover); }
+        #noBtn { background-color: var(--no-btn-bg); color: white; }
+        #noBtn:hover { background-color: var(--no-btn-hover); }
+        
+        /* FIX: CENTER THE BUTTON CONTAINER */
+        #options {
+            display: flex;
+            justify-content: center; 
+            margin-top: 20px;
+        }
+
+        #heavenContent {
+            margin-top: 30px;
+            display: none; /* Hidden by default */
+        }
+        
+        #heavenContent h2 {
+            /* Ensure the heading uses the cartoony font and is very prominent */
+            font-family: 'Kalam', cursive; 
+            color: var(--heaven-color); 
+            font-size: 3em; 
+            border-bottom: 3px solid var(--heaven-color);
+            padding-bottom: 10px;
+            text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+        }
+        
+        .picture-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .picture-container img {
+            max-width: 300px;
+            height: auto;
+            border: 5px solid white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="message">heyyy!! i think i saw an angel😭</div>
+
+    <div id="question" style="display: none;">
+        do you wanna see the angel that i saw???
+    </div>
+
+    <div class="buttons" id="options" style="display: none;">
+        <button id="yesBtn" onclick="showHeaven()">Yes</button>
+        <button id="noBtn" onclick="closePrompt()">No</button>
+    </div>
+
+    <div id="heavenContent">
+        <h2>The Angel</h2>
+        <div class="picture-container" id="pictureHolder">
+            <img src="gf pic 1.jfif" alt="Heaven Picture 1"> 
+            <img src="gf pic 2.jfif" alt="Heaven Picture 2">
+            <img src="gf pic 3.jfif" alt="Heaven Picture 3"> 
+            <img src="gf pic 4.jfif" alt="Heaven Picture 4"> 
+        </div>
+    </div>
+
+    <script>
+        // Start the conversation after a small delay
+        setTimeout(() => {
+            document.getElementById('question').style.display = 'block';
+            document.getElementById('options').style.display = 'flex'; // Changed to 'flex' for centered buttons
+        }, 1500); // 1.5 seconds delay
+
+        function showHeaven() {
+            // Hide the question and buttons
+            document.getElementById('question').style.display = 'none';
+            document.getElementById('options').style.display = 'none';
+            
+            // Change the initial message
+            document.getElementById('message').innerHTML = 'an angel with a gigantic forehead';
+            
+            // Show the pictures
+            document.getElementById('heavenContent').style.display = 'block';
+        }
+
+        function closePrompt() {
+            // Hide the question and buttons
+            document.getElementById('question').style.display = 'none';
+            document.getElementById('options').style.display = 'none';
+            
+            // Change the message to a sweet one
+            document.getElementById('message').innerHTML = 'That\'s okay, I\'ll just keep it secret for a while longer! 😊';
+        }
+    </script>
+
+</body>
+</html>
