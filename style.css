@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little Bit of Heaven</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ... existing CSS variables here ... */
+
+        body {
+            /* 2. CHANGE THE FONT FAMILY */
+            font-family: 'Kalam', cursive;
+            text-align: center;
+            padding-top: 50px;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        
+        #message {
+            font-size: 2.5em; /* Make the main message bigger */
+            margin-bottom: 20px;
+            font-weight: 700; /* Make it bold for more impact */
+            /* You can add a text shadow for a more cartoony look */
+            text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5); 
+        }
+        
+        /* You might want the heading to be slightly different */
+        #heavenContent h2 {
+            color: #ff69b4; /* Pink */
+            font-size: 3em; 
+            border-bottom: 3px solid #ff69b4;
+            padding-bottom: 10px;
+            font-family: 'Kalam', cursive; /* Ensure the new font is used */
+        }
+
+        /* ... rest of your styles ... */
+    </style>
+</head>
+<body>
